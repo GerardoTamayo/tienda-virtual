@@ -35,7 +35,7 @@ CREATE TABLE tb_pedidos (
 CREATE TABLE tb_categorias (
   id_categoria INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(25) NOT NULL,
-  imagen VARCHAR(10) NOT NULL
+  imagen VARCHAR(10) 
 );
 
 CREATE TABLE tb_detalle_pedidos (
@@ -72,7 +72,7 @@ CREATE TABLE tb_administradores (
   id_administrador INT AUTO_INCREMENT PRIMARY KEY,
   nombre_administrador VARCHAR(50) NOT NULL,
   apellido_administrador VARCHAR(50) NOT NULL,
-  clave_administrador VARCHAR(25) NOT NULL,
+  clave_administrador VARCHAR(100) NOT NULL,
   correo_administrador VARCHAR(200) NOT NULL UNIQUE,
   id_tipo INT
 );
