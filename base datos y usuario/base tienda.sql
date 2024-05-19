@@ -20,7 +20,7 @@ CREATE TABLE tb_productos (
   precio_unitario DECIMAL(5,2) NOT NULL,
   descripcion VARCHAR(255) NOT NULL,
   id_marca INT,
-  imagen VARCHAR(25),
+  imagen VARCHAR(50),
   id_administrador INT
 );
 
@@ -35,7 +35,7 @@ CREATE TABLE tb_pedidos (
 CREATE TABLE tb_categorias (
   id_categoria INT AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(25) NOT NULL,
-  imagen VARCHAR(10) 
+  imagen VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE tb_detalle_pedidos (
@@ -56,7 +56,7 @@ CREATE TABLE tb_marcas (
   id_marca INT AUTO_INCREMENT PRIMARY KEY,
   nombre_marca VARCHAR(25) NOT NULL,
   telefono_marca VARCHAR(10) NOT NULL,
-  logo_marca VARCHAR(10)
+  logo_marca VARCHAR(50)
 );
 
 CREATE TABLE tb_comentarios (
@@ -74,7 +74,7 @@ CREATE TABLE tb_administradores (
   apellido_administrador VARCHAR(50) NOT NULL,
   clave_administrador VARCHAR(100) NOT NULL,
   correo_administrador VARCHAR(200) NOT NULL UNIQUE,
-  id_tipo INT
+  id_tipo INT NULL 
 );
 
 CREATE TABLE tb_tallas (
